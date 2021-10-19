@@ -13,7 +13,7 @@ module Lesson6 where
     [_,_:xs] --» egy két elemű lista, aminek a második eleme egy legalább egy elemű lista
     [a, (x,y), _a] --» egy 3 elemű lista, ami tupleket tartalmaz
     (c:cs:[(x,xs)]) --» u.a mint egyel feljebb
-    ([d]:[ds]) == [[d], ds] --» kér elemű lista, aminek az első eleme egy egy elemű lista 
+    ([d]:[ds]) == [[d], ds] --» két elemű lista, aminek az első eleme egy egy elemű lista 
  -}
 
 --type Point = (Int, Int)
