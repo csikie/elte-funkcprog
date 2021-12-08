@@ -1,6 +1,6 @@
 # Minta vizsga
 
-## 1. Párok párja
+## 1. Párok párja (1 pont)
 
 Írd meg a `splitQuadruple :: (a,b,c,d) -> ((a,b),(c,d))` függvényt, mely egy négyest (4 elemű tuple) párok párjára képez úgy, hogy az első két elem kerüljön az első párba, és a második két elem kerüljön a második párba. Tartsd meg elemek eredeti sorrendjét.
 
@@ -13,7 +13,7 @@ splitQuadruple (1,2,3,4) == ((1,2), (3,4))
 splitQuadruple ("a", "b", "c", "d") == (("a", "b"), ("c", "d"))
 ```
 
-## 2. Számok távolsága
+## 2. Számok távolsága (1 pont)
 
 Add meg két tetszőleges szám távolságát (abszolútértékben vett különbségét) a számegyenesen.
 
@@ -30,7 +30,7 @@ dist1 (-1) 1 == 2
 dist1 (-1) (-3) == 2
 ```
 
-## 3. Kroenecker-delta
+## 3. Kroenecker-delta (1 pont)
 
 Implementáld a Kroenecker-delta függvényt, melynek értéke 1, ha paraméterei megegyeznek, 0, egyébként.
 
@@ -47,7 +47,7 @@ kroeneckerDelta [1,2] [1,2] == 1
 kroeneckerDelta [1,2] [3,4] == 0
 ```
 
-## 4. Előfordulások
+## 4. Előfordulások (2 pont)
 
 Számold meg hányszor fordul elő egy listában egy adott elem.
 
@@ -65,7 +65,7 @@ freq 50 [1..10]   == 0
 freq [1,2] [[0, 1, 2], [1,2], [2,1], [], [1,2]] == 2
 ```
 
-## 5. Nagybetű
+## 5. Nagybetű (2 pont)
 
 Döntsd el egy karakterláncról, hogy tartalmaz-e nagybetűt.
 
@@ -81,7 +81,7 @@ hasUpperCase "03 January" == True
 hasUpperCase "" == False
 ```
 
-## 6. Azonosító
+## 6. Azonosító (3 pont)
 
 Döntsd el egy karakterláncról, hogy azonosító-e, azaz teljesül-e rá, hogy csak kis- vagy nagybetűvel kezdődik és minden további eleme csak kisbetű, nagybetű, számjegy, vagy az alulvonás karakter
 
@@ -101,7 +101,7 @@ identifier "03 January" == False
 identifier "" == False
 ```
 
-## 7. Csere
+## 7. Csere (2 pont)
 
 Cseréld ki egy listának a megadott pozícióján levő elemét a paraméterben megadott elemre. Amennyiben a pozíció negatív, az elemet szúrd be a lista elejére. Amennyiben a pozíció legalább akkora, mint a lista elemszáma, az elemet a lista végére szúrd be. A listát 0-tól indexeljük.
 
@@ -119,7 +119,7 @@ replace 9000 '*' "hello world" == "hello world*"
 replace 0 'X' "" == "X"
 ```
 
-## 8. Páros-páratlan
+## 8. Páros-páratlan (3 pont)
 
 Döntsd el, hogy teljesül-e számok egy listájára, hogy a páros helyeken páros számok, a páratlan helyeken pedig páratlan számok állnak. A listákat 0-tól indexeljük.
 
@@ -141,7 +141,7 @@ paripos [1] == False
 paripos [] == True
 ```
 
-## 9. Biztonságos osztás
+## 9. Biztonságos osztás (1 pont)
 
 Készíts függvényt, amely `Just` adatkonstruktorban megadja két egész szám lefele kerekített hányadosát, amennyiben a nevező nem 0. Amennyiben a nevező 0, a függvény értéke `Nothing`.
 
@@ -157,7 +157,7 @@ safeDiv 5 2 == Just 2
 safeDiv 5 0 == Nothing
 ```
 
-## 10. Elválasztójelek
+## 10. Elválasztójelek (3 pont)
 
 Írj függvényt, ami egy szavakat pontosvesszőkkel elválasztva tartalmazó karakterláncból egy listába gyűjti a szavakat. Az üres sztringet is érvényes szónak tekintjük.
 
@@ -175,7 +175,7 @@ parseCSV "ELTE;IK;2019;" == ["ELTE","IK","2019",""]
 parseCSV ";ELTE;IK;2019;" == ["","ELTE","IK","2019",""]
 ```
 
-## 11. C kombinátor
+## 11. C kombinátor (1 pont)
 
 Készíts magasabbrendű függvényt, mely "megcseréli" egy két paraméteres függvény argumentumait.
 
@@ -193,7 +193,7 @@ c (c div) 12 4 == 3
 c (c (++)) "hello" " world" == "hello world"
 ```
 
-## 12. Kivéve, ha ...
+## 12. Kivéve, ha ...(2 pont)
 
 Válaszd ki egy lista azon elemeit, melyekre teljesül az első paraméterben kapott feltétel, de nem teljesül a második paraméterben kapott feltétel.
 
@@ -208,7 +208,7 @@ selectUnless ((<= 2) . length) null ["", "n", "xo", "", "alma"] == ["n", "xo"]
 selectUnless ((0==) . (`mod` 2)) ((0/=) . (`mod` 3)) [1..50] == [6,12,18,24,30,36,42,48]
 ```
 
-## 13. W kombinátor
+## 13. W kombinátor (1 pont)
 
 Készíts magasabbrendű függvényt, mely általánosítja a négyzetre emelést: egy függvényt és egy értéket vár paraméterül és úgy alkalmazza a függvényt, hogy mindkét argumentuma az érték legyen.
 
@@ -227,7 +227,7 @@ w (++) "ba" == "baba"
 w (++) [] == ([] :: [Int])
 ```
 
-## 14. Iteratív alkalmazás
+## 14. Iteratív alkalmazás (3 pont)
 
 Készítsd el az `ntimes` magasabbrendű függvényt, amely iteratívan alkalmaz egy függvényt egy értékre az eddigi számítások eredményének felhasználásával: `` x `f` x `f` ... `f` x `f` x ``, ahol `x` a megadott számú alkalommal fordul elő.
 
@@ -256,7 +256,7 @@ ntimes (++) "la" 5 == "lalalalala"
 ntimes (++) "" 5 == ""
 ```
 
-## 15. Binárisok I.
+## 15. Binárisok I. (2 pont)
 
 Definiáld a `Binary` adattípust, melynek két paraméternélküli adatkonstruktora van: `On` és `Off`. Írj `deriving (Eq,Show)` záradékot hozzá!
 
@@ -271,7 +271,7 @@ switch (switch On) == On
 switch (switch (switch Off)) == On
 ```
 
-## 16. Binárisok II.
+## 16. Binárisok II. (2 pont)
 
 Definiáld a `bxor :: [Binary] -> [Binary] -> [Binary]` függvényt, amely visszaad egy listát, amely az `i`-edik pozíción `On` értéket tartalmaz, ha az `i`-edik pozíción mindkét paraméterben kapott listában egyaránt `On` vagy egyaránt `Off` érték szerepel.
 
